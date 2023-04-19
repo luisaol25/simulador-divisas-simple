@@ -51,7 +51,13 @@ function convertir() {
 			return;
 	}
 
-	// Realizar la conversión y mostrar el resultado en una ventana de alerta
-	let resultado = cantidad * tasa;
-	alert(`${cantidad} ${divisaOrigen} equivale a ${resultado.toFixed(2)} ${divisaDestino}.`);
+
+	//Se agrega función para la funcionalidad
+	function calcular(cantidad, tasa){
+		let resultado = cantidad * tasa;
+		return `${cantidad} ${divisaOrigen} equivale a ${resultado.toFixed(2)} ${divisaDestino}.`;
+
+	}
+
+	alert(calcular(cantidad, tasa));
 }
